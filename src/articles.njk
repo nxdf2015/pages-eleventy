@@ -1,0 +1,41 @@
+---
+title: articles newsapi
+layout: layout
+---
+
+<style>
+
+.articles  {
+    color: black;
+    list-style:none;
+    --background-article: blue;
+}
+.title  {
+    padding:5px;
+    font-size:1.5rem;
+    margin-top: 0.5rem;
+    
+    text-align: left;
+    color: var(--background-article);
+    
+
+}
+.title:hover {
+    --background-article:orange;
+    font-weight:800;
+    background: lightgreen;
+}
+.title a {
+    text-decoration:none;
+    color: inherit;
+}
+
+
+
+</style>
+
+<ul class="articles">
+{% for article in news.articles %}
+ <li class="title" ><a href="">{{article.title}}</a></li>
+{% endfor %}
+</ul>
