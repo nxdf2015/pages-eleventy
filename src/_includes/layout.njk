@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+    <style>
+    .center {
+        text-align:center;
+    }
+    nav{
+        width: 50vw;
+        display:flex;
+        justify-content: space-around;
+        background: lightblue;
+        margin:auto;
+
+    }
+    </style>
+<body class="center">
+<nav>
+<a href="/about">about</a>|<a href="/">home page</a>
+</nav>
+    {{content | safe }}
+    </body>
+    </html>   
