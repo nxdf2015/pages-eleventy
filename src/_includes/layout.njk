@@ -12,16 +12,27 @@
     nav{
         width: 50vw;
         display:flex;
+        
         justify-content: space-around;
         background: lightblue;
         margin:auto;
 
     }
+
+    .link-country{
+        margin: 0 5px;
+        background: lightblue;
+        color:white;
+    }
     </style>
 <body class="center">
 <nav>
-<a href="/about">about</a>|<a href="/">home page</a>|<a href="/articles">articles</a>
+<a href="/about">about</a>|<a href="/">home page</a>
 </nav>
+{% for country in langage.countries %}
+<a ="linkCountry" href="/{{country}}/index.html" >{{country}}</a>
+{% endfor %}
+
     {{content | safe }}
     
     </body>

@@ -1,6 +1,11 @@
 ---
 title: articles newsapi
 layout: layout
+pagination:
+    data: news
+    size: 1
+    alias: news 
+permalink: /{{news.country}}/index.html
 ---
 
 <style>
@@ -33,9 +38,14 @@ layout: layout
 
 
 </style>
+ 
 
+ 
 <ul class="articles">
+
+{{news.country}}
 {% for article in news.articles %}
- <li class="title" ><a href="">{{article.title}}</a></li>
+ <li class="title" ><a href={{article.url}} target="_blank">{{article.title}}</a></li>
 {% endfor %}
+ 
 </ul>
