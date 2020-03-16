@@ -2,5 +2,6 @@
 
 permalink: _redirects
 ---
-
-/ /fr 302 Country=fr
+{% for lang in langage %}
+/ /{{lang}} 302 Country={{lang}}
+{% endfor %}
